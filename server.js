@@ -23,13 +23,3 @@ app.get("/heavy", (req, res) => {
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
-
-/*
-https://www.digitalocean.com/community/tutorials/how-to-scale-node-js-applications-with-clustering#step-1-setting-up-the-project-directory
-
---for load test cmd
-loadtest -n 1200 -c 200 -k http://localhost:3000/heavy
-
---Using pm2 for Clustering
-pm2 start index.js -i 0
-*/

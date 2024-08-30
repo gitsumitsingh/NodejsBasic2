@@ -8,7 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon --inspect primary.js",
-    "server": "nodemon --inspect server.js"
+    "server": "nodemon --inspect server.js",
+    "worker1": "nodemon --inspect src/worker/index.js",
+    "worker2": "nodemon --inspect src/worker/indexWorker.js",
+    "worker3": "nodemon --inspect src/worker/indexFourWorker.js"
   },
   "keywords": [],
   "author": "Sumit Singh",

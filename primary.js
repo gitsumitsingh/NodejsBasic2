@@ -5,7 +5,8 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const cpuCount = os.cpus().length;
+let cpuCount = os.cpus().length;
+// cpuCount = 4;
 
 console.log(`import.meta.url ${import.meta.url}`);
 console.log(`The total number of CPUs is ${cpuCount}`);
@@ -22,3 +23,18 @@ cluster.on("exit", (worker, code, signal) => {
   console.log("Starting another worker");
   cluster.fork();
 });
+
+/*
+
+https://youtu.be/6lHvks6R6cI?si=8ay8fne3UnFsIB1z
+Scaling your Node.js app using the "cluster" module
+
+https://www.digitalocean.com/community/tutorials/how-to-scale-node-js-applications-with-clustering#step-1-setting-up-the-project-directory
+
+--for load test cmd
+npx loadtest -n 600 -c 100 -k http://localhost:7000/heavy
+
+--Using pm2 for Clustering
+pm2 start index.js -i 0
+
+*/
