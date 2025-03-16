@@ -1,4 +1,8 @@
-
 # dependencies
 /node_modules
 
+# config
+/config.env
+
+# file upload
+/src/Public/Uploads

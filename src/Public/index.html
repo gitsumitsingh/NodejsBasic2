@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload with Multer</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>File Upload</h1>
+    <form action="/api/profileupload" method="post" enctype="multipart/form-data">
+        <label for="img">Select image:</label>
+        <input type="file" id="img" name="image" accept="image/*">
+        <input type="submit" value="Upload" />
+    </form>
+</body>
+</html>
